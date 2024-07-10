@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "name": "john@gmail.com",
+      "lname": "doe",
+      "email": "john@gmail.com",
+      "password": "123",
+      "number": "12345678",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "name": "kate",
+      "lname": "doe",
+      "email": "kate@gmail.com",
+      "password": "123",
+      "number": "234545",
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "name": "ross",
+      "lname": "doe",
+      "email": "ross@gmail.com",
+      "password": "123",
+      "number": "123",
+      "userId": 3,
+      "id": 3
+    }
+  ]
+}
