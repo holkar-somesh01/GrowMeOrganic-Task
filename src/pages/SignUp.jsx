@@ -50,6 +50,7 @@ const SignUp = () => {
             GetuserQuery()
         }
     }, [getSuccess])
+    console.log(GetUser);
     useEffect(() => {
         if (isSuccess) {
             toast.success("Sign Up Success")
