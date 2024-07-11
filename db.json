@@ -1,31 +1,3 @@
 {
-  "users": [
-    {
-      "name": "somesh",
-      "lname": "holkar",
-      "email": "somesh@gmail.com",
-      "password": "123",
-      "number": "1234567890",
-      "userId": 1,
-      "id": 1
-    },
-    {
-      "name": "john",
-      "lname": "doe",
-      "email": "john@gmail.com",
-      "password": "123",
-      "number": "12489098990",
-      "userId": 2,
-      "id": 2
-    },
-    {
-      "name": "kate",
-      "lname": "deo",
-      "email": "kate@gmail.com",
-      "password": "123",
-      "number": "12345678987",
-      "userId": 3,
-      "id": 3
-    }
-  ]
+  "users": []
 }
