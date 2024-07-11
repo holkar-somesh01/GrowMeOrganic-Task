@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,12 +12,14 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../redux/Slices/UserSlice';
 
 const Navbar = () => {
-    const pages = ['Department', 'UserData', 'Login'];
+    const navigate = useNavigate()
+    const { user } = useSelector(state => state.auth)
+    const pages = ['Department', 'UserData', 'Home'];
     const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
     const [anchorElNav, setAnchorElNav] = useState(null);
     const [anchorElUser, setAnchorElUser] = useState(null);
@@ -38,6 +40,11 @@ const Navbar = () => {
         callAction(logout())
         handleCloseUserMenu()
     };
+    useEffect(() => {
+        if (!user) {
+            navigate("/login")
+        }
+    }, [user])
     return <>
         <AppBar position="static">
             <Container maxWidth="xl">

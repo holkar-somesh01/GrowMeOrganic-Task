@@ -4,10 +4,11 @@ import SignUp from './pages/SignUp'
 import SignIn from './pages/SignIn'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/ReactToastify.min.css'
-import Home from './pages/Home'
 import Protected from './share/Protected'
 import Department from './pages/Department'
 import Table from './pages/Table'
+// import Home from './pages/Main'
+import Home from './pages/Home'
 
 const App = () => {
   return <>

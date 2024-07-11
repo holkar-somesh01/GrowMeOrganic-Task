@@ -17,12 +17,14 @@ import * as yup from 'yup';
 import { useLazyLoginUserQuery } from '../redux/api/userApi';
 import { toast } from 'react-toastify';
 import { Link, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const SignIn = () => {
 
     const defaultTheme = createTheme();
     const navigate = useNavigate()
     const [LoginUser, { data, isSuccess, isLoading, isError, error }] = useLazyLoginUserQuery()
+    const { user } = useSelector(state => state.auth)
     const formik = useFormik({
         initialValues: {
             email: "",
@@ -36,7 +38,12 @@ const SignIn = () => {
             LoginUser(values)
             resetForm()
         }
-    });
+    })
+    useEffect(() => {
+        if (user) {
+            navigate("/home")
+        }
+    }, [])
     useEffect(() => {
         if (isSuccess && data) {
             toast.success("Sign In Success")
