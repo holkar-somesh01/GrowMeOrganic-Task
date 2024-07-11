@@ -5,7 +5,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-// import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
@@ -18,7 +17,6 @@ import { useGetUsersQuery, useLazyGetUsersQuery, useRegisterUserMutation } from 
 import { toast } from 'react-toastify';
 import { json, Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-// import { userId } from '../redux/Slices/UserSlice';
 
 const SignUp = () => {
     const defaultTheme = createTheme()
@@ -26,7 +24,6 @@ const SignUp = () => {
     const { user, userId } = useSelector(state => state.auth)
     const [RegisterUser, { isSuccess, isLoading, isError, error }] = useRegisterUserMutation()
     const [GetuserQuery, { data: GetUser, isSuccess: getSuccess }] = useLazyGetUsersQuery()
-    // const { data: GetUser } = useGetUsersQuery()
     const formik = useFormik({
         initialValues: {
             name: "",
