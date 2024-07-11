@@ -13,23 +13,49 @@ const Department = () => {
             label: 'Customer Service',
             children: [
                 { id: '1', label: 'Support' },
-                { id: '2', label: 'Customer Success' },
+                {
+                    id: '2', label: 'Customer_Success', children: [
+                        { id: "well", label: "Well Servise" },
+                        { id: "24/7", label: "24/7" },
+                    ]
+                },
             ],
         },
         {
             id: 'pickers',
             label: 'Design',
             children: [
-                { id: 'pickers-community', label: 'Graphic Design' },
-                { id: 'pickers-pro', label: 'Product Design' },
-                { id: 'web-design', label: 'Web Design' },
+                {
+                    id: 'pickers-community', label: 'Graphic Design', children: [
+                        { id: "PhotoShop", label: "PhotoShop" },
+                        { id: "Canva", label: "Canva" },
+                        { id: "Figma1", label: "Figma" },
+                    ]
+                },
+                {
+                    id: 'pickers-pro', label: 'Product Design', children: [
+                        { id: "Laptop", label: "Laptop" },
+                        { id: "Mouse", label: "Mouse" }
+                    ]
+                },
+                {
+                    id: 'web-design', label: 'Web Design', children: [
+                        { id: "Figma", label: "Figma" },
+                    ]
+                },
             ],
         },
         {
             id: 'Web',
             label: 'Web Developer',
             children: [
-                { id: 'React', label: 'React.js' },
+                {
+                    id: 'React', label: 'React.js', children: [
+                        { id: "Bootstrap", label: "Bootstrap" },
+                        { id: "Tailwind", label: "Tailwind" },
+                        { id: "Redux", label: "Redux" },
+                    ]
+                },
                 { id: 'Next', label: 'Next.js' },
                 { id: 'TypeScript', label: 'TypeScript' },
             ],
@@ -58,7 +84,7 @@ const Department = () => {
                                 <RichTreeView
                                     items={[dept]}
                                     itemChildrenIndentation={24}
-                                    defaultExpandedItems={[dept.id]}
+                                    defaultExpandedItems={[]} // Empty array to collapse all nodes by default
                                 />
                             </Box>
                         </Grid>
