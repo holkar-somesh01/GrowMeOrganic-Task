@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 
 export const userApi = createApi({
     reducerPath: "userApi",
-    baseQuery: fetchBaseQuery({ baseUrl: "https://inquisitive-heliotrope-1f9336.netlify.app//users" }),
+    baseQuery: fetchBaseQuery({ baseUrl: "https://inquisitive-heliotrope-1f9336.netlify.app/users" }),
     tagTypes: ["user"],
     endpoints: (builder) => {
         return {

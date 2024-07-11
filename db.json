@@ -17,6 +17,15 @@
       "number": "12489098990",
       "userId": 2,
       "id": 2
+    },
+    {
+      "name": "kate",
+      "lname": "deo",
+      "email": "kate@gmail.com",
+      "password": "123",
+      "number": "12345678987",
+      "userId": 3,
+      "id": 3
     }
   ]
 }
