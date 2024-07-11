@@ -41,13 +41,13 @@ const SignIn = () => {
     })
     useEffect(() => {
         if (user) {
-            navigate("/home")
+            navigate("/table")
         }
     }, [])
     useEffect(() => {
         if (isSuccess && data) {
             toast.success("Sign In Success")
-            navigate("/home")
+            navigate("/table")
         } else if (isSuccess && !data) {
             toast.error("Email or Password Not valid")
         }

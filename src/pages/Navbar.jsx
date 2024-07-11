@@ -19,7 +19,7 @@ import { logout } from '../redux/Slices/UserSlice';
 const Navbar = () => {
     const navigate = useNavigate()
     const { user } = useSelector(state => state.auth)
-    const pages = ['Department', 'UserData', 'Home'];
+    const pages = ['Department', 'UserData'];
     const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
     const [anchorElNav, setAnchorElNav] = useState(null);
     const [anchorElUser, setAnchorElUser] = useState(null);
