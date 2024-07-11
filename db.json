@@ -1,31 +1,22 @@
 {
   "users": [
     {
-      "name": "john@gmail.com",
-      "lname": "doe",
-      "email": "john@gmail.com",
+      "name": "somesh",
+      "lname": "holkar",
+      "email": "somesh@gmail.com",
       "password": "123",
-      "number": "12345678",
+      "number": "1234567890",
       "userId": 1,
       "id": 1
     },
     {
-      "name": "kate",
+      "name": "john",
       "lname": "doe",
-      "email": "kate@gmail.com",
+      "email": "john@gmail.com",
       "password": "123",
-      "number": "234545",
+      "number": "12489098990",
       "userId": 2,
       "id": 2
-    },
-    {
-      "name": "ross",
-      "lname": "doe",
-      "email": "ross@gmail.com",
-      "password": "123",
-      "number": "123",
-      "userId": 3,
-      "id": 3
     }
   ]
 }

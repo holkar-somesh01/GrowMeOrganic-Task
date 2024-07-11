@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 
 export const blogApi = createApi({
     reducerPath: "blogApi",
-    baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000/blogs" }),
+    baseQuery: fetchBaseQuery({ baseUrl: "https://inquisitive-heliotrope-1f9336.netlify.app/blogs" }),
     tagTypes: ["blog"],
     endpoints: (builder) => {
         return {
